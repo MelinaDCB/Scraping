@@ -23,6 +23,5 @@ page = Nokogiri::HTML(URI.open("http://annuaire-des-mairies.com/val-d-oise.html"
 link = page.xpath('//a[contains(@href, "./95/")]/@href')
 list_urls = link.map {|x| "https://www.annuaire-des-mairies.com" + x.text[1..-1]}
 
-#list_urls.each {|x| get_townhall_emails(x)}
+list_urls.each {|x| get_townhall_emails(x)}
 
-get_townhall_emails(https://www.annuaire-des-mairies.com/95/ableiges.html)
